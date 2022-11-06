@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Admission Predictor</title>
+    </head>
+    <body>
+        <div>
+            <h1>Chance of getting admission</h1>
+
+            <form method="post" action="/predict">
+                <input type="number" name="GRE Score" placeholder="GRE Score" required="required"/><br>
+                <input type="number" name="TOEFL Score" placeholder="TOEFL Score" required="required"/><br>
+                <input type="number" name="University Rating" placeholder="University Rating(1 to 5)" required="required"/><br>
+                <input type="number" name="SOP" placeholder="SOP(1 to 5)" required="required"/><br>
+                <input type="number" name="LOR " placeholder="LOR (1 to 5)" required="required"/><br>
+                <input type="number" name="CGPA" placeholder="CGPA(1 to 10)" required="required"/><br>
+                <input type="number" name="Research" placeholder="Research(0 or 1)" required="required"/><br>
+
+                <button type="submit" >PREDICT</button>
+            </form>
+
+            <br>
+            <br>
+            {{ prediction_text }}
+        </div>
+    </body>
+</html>
